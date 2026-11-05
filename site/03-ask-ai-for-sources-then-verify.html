@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 3 — Ask AI for Sources, Then Verify Them — Searching Well with AI</title>
+<meta name="description" content="A friendly manual on getting good answers from search engines and AI chatbots together — by Dylan Asdale (Asdale Dynamics, LLC).">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Searching Well with AI</a>
+    <span class="tagline">a friendly manual · Dylan Asdale · Asdale Dynamics, LLC</span>
+  </div>
+  <nav class="wrap nav">
+    <a href="index.html" class="">Home</a> <a href="01-when-search-beats-the-chatbot.html" class="">1. Search vs Chatbot</a> <a href="02-crafting-searches.html" class="">2. Craft Searches</a> <a href="03-ask-ai-for-sources-then-verify.html" class="kn">3. Sources & Verify</a> <a href="04-reverse-image-search.html" class="">4. Reverse Image Search</a> <a href="05-date-checks-on-stale-advice.html" class="">5. Date Checks</a> <a href="06-five-question-reliability-rubric.html" class="">6. Reliability Rubric</a>
+  </nav>
+</header>
+<main class="wrap">
+<article>
+<h1>Chapter 3 — Ask AI for Sources, Then Verify Them</h1>
+<p><em>Chatbots confidently cite papers, studies, and pages that do not exist. This is
+called “hallucination,” which is a polite word for “made up.” Here&rsquo;s the routine
+that catches it in under two minutes.</em></p>
+<h2>Step 1: Ask for sources — properly</h2>
+<p>A lazy ask gets a lazy answer. Try these prompts, in increasing strength:</p>
+<ul>
+<li><strong>Basic:</strong> <em>&ldquo;Which sources did you base that on? List them.&rdquo;</em></li>
+<li><strong>Better:</strong> <em>&ldquo;List every source you used, with publication name, date, and a link if you can. If you&rsquo;re not certain a source exists, mark it with (NOT VERIFIED).&rdquo;</em></li>
+<li><strong>Strongest:</strong> <em>&ldquo;Answer, then list sources as a table: claim you made | source name | date | link. Mark any source you cannot fully confirm as NEEDS-CHECK so I don&rsquo;t mistake it for real.&rdquo;</em></li>
+</ul>
+<p>The strongest version asks the model to <em>separate</em> what it&rsquo;s sure of from what it&rsquo;s
+guessing — and models are surprisingly honest when you give them an explicit slot
+to admit uncertainty in.</p>
+<h2>Step 2: Verify — the two-minute routine</h2>
+<p>For each source the AI gave you (do these in order; stop when you&rsquo;re satisfied):</p>
+<ol>
+<li><strong>Does the link open?</strong> A dead link is a red flag that the citation was invented. Copy and paste the title into a search engine instead: <code>site:journalname.org "exact article title"</code>.</li>
+<li><strong>Does the source say what the AI said it says?</strong> Open the page and Ctrl+F for the key phrase. This is the single most important step. Chatbots often cite <em>real</em> papers but <em>misstate</em> what they found.</li>
+<li><strong>Is the date right?</strong> A 2019 study presented as brand-new research is a different fact. Use the date-check habit from Chapter 5.</li>
+<li><strong>Is the source the right <em>type</em>?</strong> A blog post citing a study is not &ldquo;a study.&rdquo; If it matters, go to the primary source: the paper, the agency page, the dataset.</li>
+</ol>
+<h2>Red flags that a citation was invented</h2>
+<ul>
+<li>The author names are plausible but the <strong>journal or website isn&rsquo;t findable</strong>.</li>
+<li>The <strong>paper exists but the page number, year, or quoted sentence is off</strong>.</li>
+<li>Mixed-up citations: the quote sounds like the <em>topic</em>, but the journal is from an unrelated field.</li>
+<li>The source is &ldquo;personal communication&rdquo; or a deleted/inaccessible page — conveniently unverifiable.</li>
+<li>Every source agrees with the chatbot perfectly, from the same family of sites.</li>
+</ul>
+<p>None of these alone means a lie — but two or more means it&rsquo;s verify-first territory.</p>
+<h2>The honesty move nobody teaches</h2>
+<p>When a chatbot can&rsquo;t know something (very recent events, paywalled data, signed info),
+say so in your prompt: <em>&ldquo;If you don&rsquo;t know or can&rsquo;t verify this, say &lsquo;I don&rsquo;t know&rsquo; —
+I&rsquo;d rather have a gap than a guess.&rdquo;</em> This prompt line fixes more hallucinations than
+any other single sentence. Use it early, not after you&rsquo;ve been burned.</p>
+<h2>A worked example (60-second version)</h2>
+<p><strong>You asked:</strong> &ldquo;Does magnesium help with sleep?&rdquo; <em>(education only — discuss with your own clinician)</em></p>
+<p><strong>Chatbot says:</strong> &ldquo;Yes, studies show it improves sleep quality&rdquo; and cites &ldquo;Abbasi et al., 2012.&rdquo;</p>
+<p><strong>Verify:</strong> Paste <code>Abbasi 2012 magnesium sleep randomized</code> into a search engine.
+Find the actual paper. Open the abstract. Read whether the study population,
+dose, and outcome match what the chatbot told you. (In this real example, the study
+does exist — but note the population was elderly people with insomnia, a detail the
+chatbot dropped. Verification found the nuance.)</p>
+</article>
+<footer class="page-footer">
+  <p><strong>Next:</strong> 4. Reverse Image Search · <strong>Series:</strong> The Massive AI Manual ·
+  Companion guides: <em>Spot Fake Media Guide</em> · <em>Ask AI Better Questions</em></p>
+  <p>Education only — never medical, legal, or financial advice. No affiliate links, no trackers.
+  &copy; 2026 Asdale Dynamics, LLC · <a href="https://dylanasdale.github.io/">dylanasdale.github.io</a></p>
+  <p><a href="#top">Back to top</a></p>
+</footer>
+</main>
+</body>
+</html>
